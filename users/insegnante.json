@@ -1,0 +1,7 @@
+{
+  "host": "localhost",
+  "username": "insegnante",
+  "password": "password",
+  "port": 3306,
+  "database": "piscinecomunali"
+}

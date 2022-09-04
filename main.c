@@ -131,12 +131,18 @@ int main(void)
 	switch (role) {
 	case INSEGNANTE:
 		printf("\033[2J\033[H");
+		//run as insegnante
 		break;
 	case SEGRETERIA:
 		printf("\033[2J\033[H");
+		printf("Presso quale piscina sta lavorando? ");
+		fflush(stdout);
+		fgets(pool, 128, stdin);
+		//run as segretario
 		break;
 	case IMPIEGATO:
 		printf("\033[2J\033[H");
+		//run as impiegato comunale
 		break;
 	case FAILED_LOGIN:
 		fprintf(stderr, "Invalid credentials\n");

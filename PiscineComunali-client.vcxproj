@@ -142,8 +142,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="impiegato.c" />
+    <ClCompile Include="inout.c" />
+    <ClCompile Include="insegnante.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="parse.c" />
+    <ClCompile Include="segreteria.c" />
     <ClCompile Include="utils.c" />
   </ItemGroup>
   <ItemGroup>

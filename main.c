@@ -8,13 +8,11 @@
 //inserire nella variabile PATH il percorso della cartella del client
 #define PATH "C:/Users/checc/Desktop/Progetto BD/PiscineComunali-client/"
 
-//variabile globale per mantenere il nome della piscina presso la quale l'impiegato di segreteria lavora
-char* pool;
 
 typedef enum {
-	IMPIEGATO,
-	INSEGNANTE,
-	SEGRETERIA,
+	IMPIEGATO=1, /*role = 1*/
+	INSEGNANTE, /*role = 2*/
+	SEGRETERIA, /*role=3*/
 	FAILED_LOGIN
 }role_t;
 
@@ -131,17 +129,16 @@ int main(void)
 	switch (role) {
 	case INSEGNANTE:
 		printf("\033[2J\033[H");
+		printf("\n\n\n sei dentro insegnante \n\n\n");
 		//run as insegnante
 		break;
 	case SEGRETERIA:
 		printf("\033[2J\033[H");
-		printf("Presso quale piscina sta lavorando? ");
-		fflush(stdout);
-		fgets(pool, 128, stdin);
 		//run as segretario
 		break;
 	case IMPIEGATO:
 		printf("\033[2J\033[H");
+		printf("\n\n\n sei dentro impiegato \n\n\n");
 		//run as impiegato comunale
 		break;
 	case FAILED_LOGIN:

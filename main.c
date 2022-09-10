@@ -129,17 +129,15 @@ int main(void)
 	switch (role) {
 	case INSEGNANTE:
 		printf("\033[2J\033[H");
-		printf("\n\n\n sei dentro insegnante \n\n\n");
-		//run as insegnante
+		run_as_insegnante(conn);
 		break;
 	case SEGRETERIA:
 		printf("\033[2J\033[H");
-		//run as segretario
+		run_as_segreteria(conn);
 		break;
 	case IMPIEGATO:
 		printf("\033[2J\033[H");
-		printf("\n\n\n sei dentro impiegato \n\n\n");
-		//run as impiegato comunale
+		run_as_impiegato(conn);
 		break;
 	case FAILED_LOGIN:
 		fprintf(stderr, "Invalid credentials\n");
@@ -153,7 +151,6 @@ int main(void)
 	printf("Bye bye, may the force be with you :)");
 	
 	mysql_close(conn);
-	free(pool);
 	return 0;
 }
 

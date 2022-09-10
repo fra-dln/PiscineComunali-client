@@ -9,6 +9,10 @@
 //inserire nella variabile PATH il percorso della cartella del client
 #define PATH "C:/Users/checc/Desktop/Progetto BD/PiscineComunali-client/"
 
+//TODO: aggiungere operazioni piscine e corpo insegnante
+
+
+
 void run_as_impiegato(MYSQL* conn) {
 	char* path;
 	int op;
@@ -38,8 +42,20 @@ void run_as_impiegato(MYSQL* conn) {
 	while (true) {
 		printf("\n**** Benvenuto! Cosa posso fare per te?****\n");
 
-		/*print di tutte le operazioni che la segreteria può fare*/
-
+		printf("1) Aggiungi impiego\n");
+		printf("2) Aggiungi insegnante\n");
+		printf("3) Assegna un insegnante ad un corso\n");
+		printf("4) Aggiungi una nuova piscina\n");
+		printf("5) Aggiungi una qualifica per un insegnante\n");
+		printf("6) Rimuovi insegnante da un corso\n");
+		printf("7) Imposta fine impiego\n");
+		printf("8) Ottieni informazioni insegnante\n");
+		printf("9) Ottieni impieghi passati di un insegnante\n");
+		printf("10) Ottieni tutti gli insegnanti che lavorano in una stessa piscina\n");
+		printf("11) Ottieni informazioni piscina\n");
+		printf("12) Modifica informazioni piscina\n");
+		printf("13) Quit\n");
+		
 		if (scanf("%d", &op) == EOF) {
 			fprintf(stderr, "Unable to read from terminal\n");
 			exit(EXIT_FAILURE);
@@ -47,7 +63,32 @@ void run_as_impiegato(MYSQL* conn) {
 
 		switch (op) {
 		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			break;
+		case 7:
+			break;
+		case 8:
+			break;
+		case 9:
+			break;
+		case 10:
+			break;
+		case 11:
+			break;
+		case 12:
+			break;
 			/*tutti i vari case*/
+		case 13:
+			return;
 		default:
 			fprintf(stderr, "Invalid condition at %s:%d\n", __FILE__, __LINE__);
 			abort();

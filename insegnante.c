@@ -32,8 +32,6 @@ static void report_sett(MYSQL* conn) {
 	}
 
 
-	printf("%s", cf);
-
 	dump_result_set(conn, prepared_stmt, "\n\nReport Settimanale:\n");
 
 	mysql_stmt_next_result(prepared_stmt);
@@ -76,7 +74,6 @@ void run_as_insegnante(MYSQL* conn) {
 
 	printf("Migrazione ruolo verso INSEGNANTE\n");
 	printf("Codice fiscale: ");
-	//getchar();
 	fflush(stdout);
 	fgets(cf, 18, stdin);
 	cf[strlen(cf)-1] = '\0';
